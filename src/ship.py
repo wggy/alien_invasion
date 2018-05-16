@@ -14,16 +14,16 @@ class Ship:
 
         # 将每艘飞船放在屏幕底部中央
         self.rect.centerx = self.screen_rect.centerx
-        self.rect.centery = self.screen_rect.centery
+        self.rect.bottom = self.screen_rect.bottom
+        # self.rect.centery = self.screen_rect.centery
 
         self.move_right = False
         self.move_left = False
-        self.move_up = False
-        self.move_down = False
+        # self.move_up = False
+        # self.move_down = False
 
         self.centerx = float(self.rect.centerx)
-        self.centery = float(self.rect.centery)
-        self.bottom = self.rect.bottom
+        # self.centery = float(self.rect.centery)
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
@@ -33,9 +33,9 @@ class Ship:
             self.centerx += self.ai_settings.ship_speed_factor
         if self.move_left and self.screen_rect.left < self.rect.left:
             self.centerx -= self.ai_settings.ship_speed_factor
-        if self.move_up and self.rect.top > self.screen_rect.top:
-            self.centery -= self.ai_settings.ship_speed_factor
-        if self.move_down and self.rect.bottom < self.screen_rect.bottom:
-            self.centery += self.ai_settings.ship_speed_factor
+        # if self.move_up and self.rect.top > self.screen_rect.top:
+        #     self.centery -= self.ai_settings.ship_speed_factor
+        # if self.move_down and self.rect.bottom < self.screen_rect.bottom:
+        #     self.centery += self.ai_settings.ship_speed_factor
         self.rect.centerx = self.centerx
-        self.rect.centery = self.centery
+        # self.rect.centery = self.centery
