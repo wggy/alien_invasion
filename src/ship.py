@@ -39,3 +39,6 @@ class Ship:
         #     self.centery += self.ai_settings.ship_speed_factor
         self.rect.centerx = self.centerx
         # self.rect.centery = self.centery
+
+    def center_ship(self):
+        self.centerx = self.screen_rect.centerx
