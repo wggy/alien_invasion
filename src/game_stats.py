@@ -5,9 +5,10 @@ class GameStats:
         self.game_over = True
         self.score = 0
         self.high_score = 0
+        self.level = 1
 
     def left_stats(self):
-        if self.ships_left > 1:
+        if self.ships_left > 0:
             self.ships_left -= 1
         else:
             self.game_over = True
@@ -16,3 +17,4 @@ class GameStats:
         self.score = 0
         self.game_over = False
         self.ships_left = self.ai_settings.ship_limit
+        self.level = 1
